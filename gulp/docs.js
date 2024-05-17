@@ -72,7 +72,7 @@ gulp.task('sass:docs', function ()
 
 gulp.task('img:docs', function ()
 {
-    return gulp.src('./src/img/**/*')
+    return gulp.src('./src/img/**/*', {encoding: false})
         .pipe(changed('./docs/img'))
         .pipe(imagemin({verbose: true}))
         .pipe(gulp.dest('./docs/img'))
